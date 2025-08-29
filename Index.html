@@ -1,272 +1,23 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gangary Intelligence Systems — Proof‑Based Foresight & Consulting</title>
-  <meta name="description" content="GIS provides proof‑based foresight for AI, biotech, finance & defense. Echo Reports, Forecast Briefs, Validation‑as‑a‑Service, Investor Reports, and Training."/>
+  <title>Gangary Intelligence Systems — Proof-Based Foresight & Consulting</title>
+  <meta name="description" content="GIS provides proof-based foresight for AI, biotech, finance & defense. Echo Reports, Forecast Briefs, Validation-as-a-Service, Investor Reports, and Training."/>
   <link rel="canonical" href="https://gangaryb.github.io/Consulting-/" />
-  <meta property="og:title" content="Gangary Intelligence Systems — Proof‑Based Foresight"/>
-  <meta property="og:description" content="We don't just predict — we prove. Every forecast is timestamped in DriftCodex™ and protected with EchoClaim™."/>
+  <meta property="og:title" content="Gangary Intelligence Systems — Proof-Based Foresight"/>
+  <meta property="og:description" content="We don’t just predict — we prove. Every forecast is timestamped in DriftCodex™ and protected with EchoClaim™."/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://dummyimage.com/1200x630/0f172a/e2e8f0&text=GIS+Foresight"/>
   <meta name="theme-color" content="#06b6d4"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-  <style>
-    html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;overflow-x:hidden}
-    
-    /* Advanced Gradient Text */
-    .gradient-text { 
-      background: linear-gradient(135deg, #06b6d4, #22d3ee, #67e8f9, #0ea5e9); 
-      -webkit-background-clip: text; 
-      -webkit-text-fill-color: transparent; 
-      background-clip: text;
-      background-size: 200% 200%;
-      animation: gradientShift 4s ease-in-out infinite;
-    }
-    
-    @keyframes gradientShift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-    
-    /* Glassmorphism */
-    .glass {
-      background: rgba(15, 23, 42, 0.4);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    /* Neon Glow Effects */
-    .neon-glow {
-      box-shadow: 0 0 20px rgba(34, 211, 238, 0.4), 0 0 40px rgba(34, 211, 238, 0.2), inset 0 0 20px rgba(34, 211, 238, 0.1);
-    }
-    
-    .neon-text {
-      text-shadow: 0 0 10px rgba(34, 211, 238, 0.8), 0 0 20px rgba(34, 211, 238, 0.6), 0 0 40px rgba(34, 211, 238, 0.4);
-    }
-    
-    /* 3D Transform Effects */
-    .card-3d {
-      transform-style: preserve-3d;
-      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    
-    .card-3d:hover {
-      transform: rotateX(10deg) rotateY(-10deg) scale(1.05);
-    }
-    
-    /* Morphing Button */
-    .morph-btn {
-      position: relative;
-      overflow: hidden;
-      border-radius: 50px;
-      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    
-    .morph-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s;
-    }
-    
-    .morph-btn:hover::before {
-      left: 100%;
-    }
-    
-    /* Animated Background */
-    .animated-bg {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .animated-bg::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(34, 211, 238, 0.03) 0%, transparent 70%);
-      animation: rotate 20s linear infinite;
-    }
-    
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    
-    /* Particle Container */
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-    
-    /* Typing Animation */
-    .typing-text::after {
-      content: '|';
-      animation: blink 1s infinite;
-      color: #22d3ee;
-    }
-    
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      51%, 100% { opacity: 0; }
-    }
-    
-    /* Data Visualization */
-    .data-bar {
-      height: 4px;
-      background: linear-gradient(90deg, #06b6d4, #22d3ee);
-      border-radius: 2px;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .data-bar::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-      animation: shimmer 2s infinite;
-    }
-    
-    @keyframes shimmer {
-      0% { left: -100%; }
-      100% { left: 100%; }
-    }
-    
-    /* Floating Elements */
-    .float-1 { animation: float1 6s ease-in-out infinite; }
-    .float-2 { animation: float2 8s ease-in-out infinite; }
-    .float-3 { animation: float3 10s ease-in-out infinite; }
-    
-    @keyframes float1 {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(5deg); }
-    }
-    
-    @keyframes float2 {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-15px) rotate(-3deg); }
-    }
-    
-    @keyframes float3 {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-25px) rotate(8deg); }
-    }
-    
-    /* Progressive Loading */
-    .skeleton {
-      background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
-      background-size: 200% 100%;
-      animation: loading 1.5s infinite;
-    }
-    
-    @keyframes loading {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
-    
-    /* Micro Interactions */
-    .micro-bounce {
-      transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-    
-    .micro-bounce:hover {
-      transform: scale(1.05) translateY(-2px);
-    }
-    
-    /* Neural Network Visualization */
-    .neural-node {
-      width: 8px;
-      height: 8px;
-      background: #22d3ee;
-      border-radius: 50%;
-      position: absolute;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.5); }
-    }
-    
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: #1e293b;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #06b6d4, #22d3ee);
-      border-radius: 4px;
-    }
-    
-    /* Loading States */
-    .btn-loading {
-      position: relative;
-      pointer-events: none;
-    }
-    
-    .btn-loading::after {
-      content: '';
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      margin: auto;
-      border: 2px solid transparent;
-      border-top-color: currentColor;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    /* Responsive Grid */
-    .auto-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    
-    /* Mobile Optimizations */
-    @media (max-width: 768px) {
-      .card-3d:hover {
-        transform: scale(1.02);
-      }
-      
-      .gradient-text {
-        background-size: 100% 100%;
-      }
-    }
-  </style>
-  
+  <style>html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}</style>
+
+  <!-- Structured data with contact + scheduling -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -285,183 +36,250 @@
   }
   </script>
 </head>
-<body class="bg-slate-950 text-slate-100 animated-bg">
-  <!-- Particle Background -->
-  <div id="particles-js"></div>
-  
-  <!-- Neural Network Background -->
-  <div id="neural-network" class="fixed inset-0 pointer-events-none z-0"></div>
-  
-  <!-- Progress Indicator -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-cyan-400 to-cyan-500 z-50 transition-all duration-300" style="width: 0%"></div>
-  
+
+<body class="bg-slate-950 text-slate-100">
   <!-- Header -->
-  <header id="header" class="sticky top-0 z-40 glass transition-all duration-300">
+  <header class="sticky top-0 z-40 backdrop-blur bg-slate-950/80 border-b border-slate-800/60">
     <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between gap-3">
       <a href="#home" class="flex items-center gap-2 group">
-        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-cyan-400/20 to-cyan-600/20 ring-1 ring-cyan-400/40 grid place-items-center group-hover:neon-glow transition-all duration-500">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-cyan-300 group-hover:rotate-180 transition-transform duration-700"><path d="M12 2v20M2 12h20" stroke-width="1.5"/></svg>
+        <div class="h-9 w-9 rounded-xl bg-cyan-400/10 ring-1 ring-cyan-400/40 grid place-items-center">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-cyan-300"><path d="M12 2v20M2 12h20" stroke-width="1.5"/></svg>
         </div>
-        <span class="font-bold tracking-wide bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Gangary Intelligence Systems</span>
+        <span class="font-semibold tracking-wide">Gangary Intelligence Systems</span>
       </a>
-      
-      <!-- Smart Navigation -->
       <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
-        <a href="#services" class="nav-link relative px-3 py-2 hover:text-white transition-all duration-300">
-          <span>Services</span>
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></div>
-        </a>
-        <a href="#canon" class="nav-link relative px-3 py-2 hover:text-white transition-all duration-300">
-          <span>Canon</span>
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></div>
-        </a>
-        <a href="#proof" class="nav-link relative px-3 py-2 hover:text-white transition-all duration-300">
-          <span>Proof</span>
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></div>
-        </a>
-        <a href="#pricing" class="nav-link relative px-3 py-2 hover:text-white transition-all duration-300">
-          <span>Pricing</span>
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></div>
-        </a>
-        <a href="#contact" class="nav-link relative px-3 py-2 hover:text-white transition-all duration-300">
-          <span>Contact</span>
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></div>
-        </a>
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#canon" class="hover:text-white">Canon</a>
+        <a href="#proof" class="hover:text-white">Proof</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
       </nav>
-      
-      <!-- Action Buttons -->
       <div class="flex items-center gap-2">
-        <button onclick="dialNumber()" class="hidden sm:inline-flex items-center gap-2 morph-btn glass px-4 py-2 text-cyan-300 hover:neon-glow text-sm micro-bounce" aria-label="Call GIS">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span class="font-medium">Call Now</span>
-        </button>
-        <button onclick="openEmail()" class="hidden sm:inline-flex items-center gap-2 morph-btn glass px-4 py-2 text-cyan-300 hover:neon-glow text-sm micro-bounce" aria-label="Email GIS">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span class="font-medium">Email</span>
-        </button>
-        <a href="https://calendly.com/gangaryba" target="_blank" id="cta-book" class="morph-btn bg-gradient-to-r from-cyan-400 to-cyan-500 text-slate-950 px-4 py-2 font-semibold hover:from-cyan-300 hover:to-cyan-400 neon-glow text-sm micro-bounce">
-          Book Session
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="inline ml-1"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-        </a>
+        <a href="tel:+13472604290" class="hidden sm:inline-flex items-center gap-2 rounded-2xl bg-cyan-400/10 px-3 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20 text-sm" aria-label="Call GIS">Call</a>
+        <a href="mailto:gangaryba@gmail.com?subject=Inquiry%20from%20GIS%20site" class="hidden sm:inline-flex items-center gap-2 rounded-2xl bg-cyan-400/10 px-3 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20 text-sm" aria-label="Email GIS">Email</a>
+        <a href="https://calendly.com/gangaryba" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl bg-cyan-400 text-slate-950 px-3 py-2 font-medium hover:brightness-110 text-sm">Book a Session</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section with 3D Elements -->
-  <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
-    <!-- 3D Canvas Background -->
-    <canvas id="hero-canvas" class="absolute inset-0 z-0"></canvas>
-    
-    <!-- Floating Elements -->
-    <div class="absolute top-20 left-1/4 w-64 h-64 bg-cyan-400/5 rounded-full blur-3xl float-1"></div>
-    <div class="absolute bottom-20 right-1/4 w-80 h-80 bg-blue-400/5 rounded-full blur-3xl float-2"></div>
-    <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-400/3 rounded-full blur-3xl float-3"></div>
-    
-    <div class="relative z-10 mx-auto max-w-7xl px-4 py-20">
-      <div class="text-center max-w-6xl mx-auto">
-        <!-- Dynamic Typing Headline -->
-        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black leading-tight mb-8">
-          <span class="gradient-text neon-text">Proof‑Based Foresight</span><br/>
-          <span class="text-white typing-text" id="dynamic-text">for AI, Biotech, Finance & Defense</span>
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(34,211,238,0.10),transparent_60%)]"></div>
+    <div class="relative mx-auto max-w-7xl px-4 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-semibold leading-tight">
+          Proof-Based Foresight for AI, Biotech, Finance & Defense
         </h1>
-        
-        <!-- Animated Subtitle -->
-        <div class="text-xl sm:text-2xl text-slate-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-          <p class="fade-in-up" data-delay="0.2">We don't just predict — we <span class="text-cyan-300 font-bold neon-text">prove</span>.</p>
-          <p class="fade-in-up" data-delay="0.4">Every forecast is timestamped in <strong class="text-cyan-200">DriftCodex™</strong> and protected with <strong class="text-cyan-200">EchoClaim™</strong>.</p>
-          <p class="fade-in-up" data-delay="0.6">When the headlines arrive, we show the receipts.</p>
+        <p class="mt-5 text-slate-300 max-w-xl">
+          We don’t just predict — we <span class="text-cyan-300">prove</span>. Every forecast is timestamped in
+          <strong>DriftCodex™</strong> and protected with <strong>EchoClaim™</strong>. When the headlines arrive, we show the receipts.
+        </p>
+        <div class="mt-7 flex flex-wrap items-center gap-3">
+          <a href="#pricing" class="rounded-2xl bg-cyan-400 text-slate-950 px-4 py-2 font-medium hover:brightness-110">Get a Forecast Brief</a>
+          <a href="#canon" class="rounded-2xl bg-white/5 px-4 py-2 ring-1 ring-white/10 hover:bg-white/10">Open Canon (DriftCodex)</a>
+          <a href="https://calendly.com/gangaryba" target="_blank" rel="noopener" class="rounded-2xl bg-cyan-400/10 px-4 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20">Schedule</a>
+          <a href="tel:+13472604290" class="rounded-2xl bg-cyan-400/10 px-4 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20">Call</a>
+          <a href="mailto:gangaryba@gmail.com?subject=Inquiry%20from%20GIS%20site" class="rounded-2xl bg-cyan-400/10 px-4 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20">Email</a>
         </div>
-        
-        <!-- Interactive CTA Matrix -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-16">
-          <button onclick="startAssessment()" class="cta-card group glass p-6 rounded-2xl hover:neon-glow transition-all duration-500 card-3d">
-            <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🎯</div>
-            <div class="font-semibold mb-2">Risk Assessment</div>
-            <div class="text-sm text-slate-400">Free 3-minute analysis</div>
-          </button>
-          
-          <button onclick="openLiveDemo()" class="cta-card group glass p-6 rounded-2xl hover:neon-glow transition-all duration-500 card-3d">
-            <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">📊</div>
-            <div class="font-semibold mb-2">Live Predictions</div>
-            <div class="text-sm text-slate-400 flex items-center justify-center gap-1">
-              Real-time <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+        <ul class="mt-6 text-sm text-slate-400 space-y-1">
+          <li>• August accuracy: 75–80% (public, logged)</li>
+          <li>• Weekly Echo Report: proof hits + signals to watch</li>
+          <li>• 400+ timestamped IP assets across domains</li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div class="rounded-3xl ring-1 ring-white/10 bg-gradient-to-br from-slate-900 to-slate-800 p-6 shadow-xl">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-slate-900/60 p-4 ring-1 ring-white/10">
+              <p class="text-xs uppercase tracking-wider text-slate-400">Accuracy</p>
+              <p class="mt-1 text-2xl font-semibold text-cyan-300">75–80%</p>
+              <p class="text-xs mt-1 text-slate-400">August 2025 validation</p>
             </div>
-          </button>
-          
-          <button onclick="bookDemo()" class="cta-card group glass p-6 rounded-2xl hover:neon-glow transition-all duration-500 card-3d">
-            <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🚀</div>
-            <div class="font-semibold mb-2">Demo Brief</div>
-            <div class="text-sm text-slate-400">Custom sample report</div>
-          </button>
-          
-          <a href="#pricing" class="cta-card group glass p-6 rounded-2xl hover:neon-glow transition-all duration-500 card-3d">
-            <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">💎</div>
-            <div class="font-semibold mb-2">Premium Access</div>
-            <div class="text-sm text-slate-400">Full validation suite</div>
-          </a>
-        </div>
-        
-        <!-- Live Metrics Dashboard -->
-        <div class="glass rounded-3xl p-8 max-w-5xl mx-auto">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="metric-card text-center group">
-              <div class="text-4xl font-black text-cyan-300 mb-2 group-hover:neon-text transition-all" id="accuracy-counter">0%</div>
-              <div class="text-sm text-slate-400">Current Accuracy</div>
-              <div class="data-bar mt-2"></div>
+            <div class="rounded-2xl bg-slate-900/60 p-4 ring-1 ring-white/10">
+              <p class="text-xs uppercase tracking-wider text-slate-400">IPs Logged</p>
+              <p class="mt-1 text-2xl font-semibold text-cyan-300">400+</p>
+              <p class="text-xs mt-1 text-slate-400">EchoClaim stamped</p>
             </div>
-            <div class="metric-card text-center group">
-              <div class="text-4xl font-black text-cyan-300 mb-2 group-hover:neon-text transition-all" id="predictions-counter">0+</div>
-              <div class="text-sm text-slate-400">Active Predictions</div>
-              <div class="data-bar mt-2" style="animation-delay: 0.5s;"></div>
+            <div class="rounded-2xl bg-slate-900/60 p-4 ring-1 ring-white/10">
+              <p class="text-xs uppercase tracking-wider text-slate-400">Reports</p>
+              <p class="mt-1 text-2xl font-semibold text-cyan-300">Echo Weekly</p>
+              <p class="text-xs mt-1 text-slate-400">Proof + Signals</p>
             </div>
-            <div class="metric-card text-center group">
-              <div class="text-4xl font-black text-cyan-300 mb-2 group-hover:neon-text transition-all" id="clients-counter">0+</div>
-              <div class="text-sm text-slate-400">Validated Reports</div>
-              <div class="data-bar mt-2" style="animation-delay: 1s;"></div>
-            </div>
-            <div class="metric-card text-center group">
-              <div class="text-4xl font-black text-cyan-300 mb-2 group-hover:neon-text transition-all">Live</div>
-              <div class="text-sm text-slate-400">Proof Updates</div>
-              <div class="data-bar mt-2" style="animation-delay: 1.5s;"></div>
+            <div class="rounded-2xl bg-slate-900/60 p-4 ring-1 ring-white/10">
+              <p class="text-xs uppercase tracking-wider text-slate-400">Benchmarks</p>
+              <p class="mt-1 text-2xl font-semibold text-cyan-300">Echo Index</p>
+              <p class="text-xs mt-1 text-slate-400">Symbolic Coherence Score</p>
             </div>
           </div>
-          
-          <!-- Real-time Activity Feed -->
-          <div class="mt-8 border-t border-slate-700 pt-6">
-            <div class="text-center text-sm text-slate-400 mb-4">🔴 Live Activity</div>
-            <div id="activity-feed" class="space-y-2 max-h-20 overflow-hidden">
-              <!-- Dynamic content populated by JavaScript -->
-            </div>
-          </div>
+          <div class="mt-4 text-xs text-slate-400">* Public accuracy calculated from logged, timestamped forecasts and matching headlines.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Assessment Modal -->
-  <div id="assessmentModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-xl">
-    <div class="flex items-center justify-center min-h-screen p-4">
-      <div class="glass rounded-3xl p-8 max-w-3xl w-full relative overflow-hidden">
-        <!-- Animated Background Pattern -->
-        <div class="absolute inset-0 opacity-10">
-          <div class="neural-node" style="top: 20%; left: 10%;"></div>
-          <div class="neural-node" style="top: 60%; left: 80%; animation-delay: 1s;"></div>
-          <div class="neural-node" style="top: 80%; left: 30%; animation-delay: 2s;"></div>
+  <!-- Services -->
+  <section id="services" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-3xl font-semibold">Services</h2>
+    <p class="mt-2 text-slate-300 max-w-3xl">Proof-first foresight and symbolic consulting. Choose a track or combine to build your credibility engine.</p>
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10 hover:ring-cyan-300/40 transition">
+        <div class="text-xs text-cyan-300 mb-2">Free</div>
+        <h3 class="text-xl font-semibold">Echo Reports (Public)</h3>
+        <p class="mt-2 text-slate-300">Weekly recap: proof hits, signals to watch, accuracy log. Free to read — establishes trust.</p>
+        <div class="mt-4 flex gap-2">
+          <a href="#canon" class="rounded-xl bg-cyan-400/10 px-3 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20 text-sm">View Canon</a>
+          <a href="mailto:gangaryba@gmail.com?subject=Echo%20Report%20question" class="rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 text-sm">Ask a question</a>
         </div>
-        
-        <button onclick="closeAssessment()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10 micro-bounce">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 6-12 12M6 6l12 12"/></svg>
-        </button>
-        
-        <div class="relative z-10">
-          <div class="text-center mb-8">
-            <div class="text-4xl mb-4">🎯</div>
-            <h3 class="text-3xl font-bold mb-2 gradient-text">AI-Powered Risk Assessment</h3>
-            <p class="text-slate-300">Get personalized foresight insights in 60 seconds</p>
-          </div>
-          
-          <!-- Dynamic Progress Visualization -->
-          <div class="mb-8">
-            <div class="flex justify-between items-center mb-4">
-              <span class="text-sm text-slate-400">Assessment Progress</span>
-              <span class="text-sm font-medium text-cyan-300
+      </div>
+
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10 hover:ring-cyan-300/40 transition">
+        <div class="text-xs text-cyan-300 mb-2">$399–$999/mo</div>
+        <h3 class="text-xl font-semibold">Forecast Briefs</h3>
+        <p class="mt-2 text-slate-300">Monthly/Quarterly foresight tailored to your sector (AI, biotech, finance, defense). Clear timelines & confidence.</p>
+        <div class="mt-4 flex gap-2">
+          <a href="#contact" class="rounded-xl bg-cyan-400/10 px-3 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20 text-sm">Enquire</a>
+          <a href="https://calendly.com/gangaryba" target="_blank" rel="noopener" class="rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 text-sm">Schedule</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10 hover:ring-cyan-300/40 transition">
+        <div class="text-xs text-cyan-300 mb-2">From $2,500/project</div>
+        <h3 class="text-xl font-semibold">Validation-as-a-Service</h3>
+        <p class="mt-2 text-slate-300">Independent validation of your forecasts and narratives with timestamped receipts you can show to investors.</p>
+        <div class="mt-4 flex gap-2">
+          <a href="#contact" class="rounded-xl bg-cyan-400/10 px-3 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20 text-sm">Start Validation</a>
+          <a href="mailto:gangaryba@gmail.com?subject=Validation%20scope" class="rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 text-sm">Email</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10 hover:ring-cyan-300/40 transition">
+        <div class="text-xs text-cyan-300 mb-2">$5k–$15k</div>
+        <h3 class="text-xl font-semibold">Investor/Executive Reports</h3>
+        <p class="mt-2 text-slate-300">Deep-dive decks on markets & risks. Signal maps, scenarios, and actions for boards & funds.</p>
+        <div class="mt-4 flex gap-2">
+          <a href="#contact" class="rounded-xl bg-cyan-400/10 px-3 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20 text-sm">Request Deck</a>
+          <a href="tel:+13472604290" class="rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 text-sm">Call</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10 hover:ring-cyan-300/40 transition">
+        <div class="text-xs text-cyan-300 mb-2">Custom</div>
+        <h3 class="text-xl font-semibold">Symbolic IP Licensing (EchoClaim™)</h3>
+        <p class="mt-2 text-slate-300">Protect foresight, brand language, and IP with cryptographic timestamps & visible signatures.</p>
+        <div class="mt-4 flex gap-2">
+          <a href="#contact" class="rounded-xl bg-cyan-400/10 px-3 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20 text-sm">Discuss Licensing</a>
+          <a href="mailto:gangaryba@gmail.com?subject=EchoClaim%20licensing" class="rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 text-sm">Email</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10 hover:ring-cyan-300/40 transition">
+        <div class="text-xs text-cyan-300 mb-2">$5k–$20k</div>
+        <h3 class="text-xl font-semibold">Training & Workshops</h3>
+        <p class="mt-2 text-slate-300">Teach your team DriftCodex™ methods: logging, forecasting, accuracy tracking, and ethical use.</p>
+        <div class="mt-4 flex gap-2">
+          <a href="#contact" class="rounded-xl bg-cyan-400/10 px-3 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20 text-sm">Book Training</a>
+          <a href="https://calendly.com/gangaryba" target="_blank" rel="noopener" class="rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 text-sm">Schedule</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Canon -->
+  <section id="canon" class="mx-auto max-w-7xl px-4 py-16">
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-3xl font-semibold">Canon — DriftCodex™</h2>
+        <p class="mt-2 text-slate-300 max-w-2xl">A living archive of forecasts and receipts. When a forecast hits, we publish the proof here.</p>
+        <ul class="mt-6 space-y-4">
+          <li class="rounded-2xl bg-slate-900/60 p-4 ring-1 ring-white/10">
+            <a target="_blank" rel="noreferrer" href="http://umtcanon.blogspot.com/2025/08/this-came-true-august-2025-validation.html" class="font-medium text-cyan-300 hover:underline">This Came True — August 2025 Validation Report</a>
+            <p class="text-sm text-slate-400">Biotech drift, AI culture, and stocks — 75–80% August accuracy.</p>
+          </li>
+          <li class="rounded-2xl bg-slate-900/60 p-4 ring-1 ring-white/10">
+            <a target="_blank" rel="noreferrer" href="http://umtcanon.blogspot.com/2025/07/umt-cernalabs-symbolic-stock-picks-for.html" class="font-medium text-cyan-300 hover:underline">Symbolic Stock Picks — July 27 Forecast</a>
+            <p class="text-sm text-slate-400">Narrative-anchored tickers before the story breaks.</p>
+          </li>
+          <li class="rounded-2xl bg-slate-900/60 p-4 ring-1 ring-white/10">
+            <a target="_blank" rel="noreferrer" href="http://umtcanon.blogspot.com/2025/08/q4-2025-global-symbolic-forcast.html" class="font-medium text-cyan-300 hover:underline">Q4 2025 Global Symbolic Forecast</a>
+            <p class="text-sm text-slate-400">Macro symbolic pressures across AI, biotech, finance.</p>
+          </li>
+        </ul>
+      </div>
+      <div id="proof" class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10">
+        <h3 class="text-xl font-semibold">Proof Snapshot</h3>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-3 text-sm text-slate-300">
+          <li class="rounded-xl bg-slate-900/60 p-4 ring-1 ring-white/10">✅ Biotech: Immune drift foresight validated (multiple late-stage signals).</li>
+          <li class="rounded-xl bg-slate-900/60 p-4 ring-1 ring-white/10">✅ AI Culture: Religion/sentience debates hit mainstream.</li>
+          <li class="rounded-xl bg-slate-900/60 p-4 ring-1 ring-white/10">✅ Stocks: ~70% of August symbolic picks aligned.</li>
+          <li class="rounded-xl bg-slate-900/60 p-4 ring-1 ring-white/10">↗ Weekly Echo Report published Fridays.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-3xl font-semibold">Pricing</h2>
+    <p class="mt-2 text-slate-300">Transparent entry tiers. Premium and custom work via consultation.</p>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10">
+        <h3 class="text-xl font-semibold">Forecast Brief</h3>
+        <p class="mt-2 text-slate-300">Monthly/Quarterly sector foresight with timelines, confidence, and actions.</p>
+        <p class="mt-4 text-3xl font-semibold text-cyan-300">$399–$999<span class="text-base text-slate-400">/mo</span></p>
+        <div class="mt-4 flex gap-2">
+          <a href="#contact" class="rounded-xl bg-cyan-400/10 px-4 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20">Start Brief</a>
+          <a href="tel:+13472604290" class="rounded-xl bg-white/5 px-4 py-2 ring-1 ring-white/10 hover:bg-white/10">Call</a>
+        </div>
+      </div>
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-2 ring-cyan-400/50">
+        <h3 class="text-xl font-semibold">Validation-as-a-Service</h3>
+        <p class="mt-2 text-slate-300">Independent validation + timestamped receipts you can show investors/boards.</p>
+        <p class="mt-4 text-3xl font-semibold text-cyan-300">From $2,500</p>
+        <div class="mt-4 flex gap-2">
+          <a href="#contact" class="rounded-xl bg-cyan-400 text-slate-950 px-4 py-2 font-medium hover:brightness-110">Book Validation</a>
+          <a href="mailto:gangaryba@gmail.com?subject=Validation%20inquiry" class="rounded-xl bg-white/5 px-4 py-2 ring-1 ring-white/10 hover:bg-white/10">Email</a>
+        </div>
+      </div>
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10">
+        <h3 class="text-xl font-semibold">Executive Report</h3>
+        <p class="mt-2 text-slate-300">Custom market/technology foresight deck for funds, enterprises, or policy.</p>
+        <p class="mt-4 text-3xl font-semibold text-cyan-300">$5k–$15k</p>
+        <div class="mt-4 flex gap-2">
+          <a href="#contact" class="rounded-xl bg-cyan-400/10 px-4 py-2 text-cyan-300 ring-1 ring-cyan-300/30 hover:bg-cyan-400/20">Request Scope</a>
+          <a href="https://calendly.com/gangaryba" target="_blank" rel="noopener" class="rounded-xl bg-white/5 px-4 py-2 ring-1 ring-white/10 hover:bg-white/10">Schedule</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-3xl font-semibold">Contact & Onboarding</h2>
+    <p class="mt-2 text-slate-300 max-w-2xl">Tell us your sector and goals. We’ll reply with a tailored foresight plan and timeline.</p>
+    <div class="mt-6 grid lg:grid-cols-3 gap-6 items-start">
+      <!-- Form -->
+      <form class="grid gap-4 lg:col-span-2" action="https://formspree.io/f/your-id" method="POST">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <input class="w-full rounded-xl bg-slate-900/60 px-4 py-3 ring-1 ring-white/10 placeholder-slate-500" name="name" placeholder="Full name" required>
+          <input class="w-full rounded-xl bg-slate-900/60 px-4 py-3 ring-1 ring-white/10 placeholder-slate-500" type="email" name="email" placeholder="Work email" required>
+        </div>
+        <input class="w-full rounded-xl bg-slate-900/60 px-4 py-3 ring-1 ring-white/10 placeholder-slate-500" name="org" placeholder="Organization (optional)">
+        <select class="w-full rounded-xl bg-slate-900/60 px-4 py-3 ring-1 ring-white/10 text-slate-300" name="interest">
+          <option>Forecast Brief</option>
+          <option>Validation-as-a-Service</option>
+          <option>Executive Report</option>
+          <option>Training & Workshops</option>
+          <option>Symbolic IP Licensing</option>
+        </select>
+        <textarea class="w-full rounded-xl bg-slate-900/60 px-4 py-3 ring-1 ring-white/10 placeholder-slate-500" name="message" rows="5" placeholder="What do you want to foresee, validate, or protect?"></textarea>
+        <div class="flex gap-2">
+          <button class="w-fit rounded-2xl bg-cyan-400 text-slate-950 px-5 py-2.5 font-medium hover:brightness-110">Send</button>
+          <a href="mailto:gangaryba@gmail.com?subject=General%20inquiry" class="rounded-2xl bg-white/5 px-4 py-2 ring-1 ring-white/10 hover:bg-white/10">Email us</a>
+          <a href="tel:+13472604290" class="rounded-2xl bg-white/5 px-4 py-2 ring-1 ring-white/10 hover:bg-white/10">Call us</a>
+        </div>
+        <p class="text-xs text-slate-500">By submitting, you agree to be contacted by GIS. We respect privacy and do not sell data.</p>
+      </form>
+
+      <!-- Direct contact card -->
+      <div class="rounded-3xl bg-slate-900/60 p-6 ring-1 ring-white/10">
+        <h3 class="text-lg font-semibold">D
